@@ -53,20 +53,6 @@ function refreshchartdata(product) {
 
 }
 
-function adddata() {
-    var value = Math.floor((Math.random() * 100) + 1);
-    if (myLineChart.data.datasets[0].data.length > 6) {// start splicing after some length so that x axis have some data to plot
-        myLineChart.data.datasets[0].data.splice(0, 1);
-        myLineChart.data.labels.splice(0, 1);
-    }
-    myLineChart.data.datasets[0].data.push(value);
-    myLineChart.data.labels.push(value);
-    myLineChart.update();    
-}
-
-setInterval(function () {
-    //adddata();
-}, 1000);
 
 var option = {
     showLines: true,
