@@ -1,0 +1,20 @@
+﻿
+<div class="container">
+	  <canvas id="myChart" style="width:100%;max-height:600px"></canvas>
+</div>
+
+
+@section Scripts{
+
+	<environment include="development">
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js" asp-append-version="true"></script>
+     <script src="~/js/signal.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment exclude="development">
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js" asp-append-version="true"></script>
+    </environment>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<script src="~/js/signalr-chart.js" asp-append-version="true"></script>
+}
